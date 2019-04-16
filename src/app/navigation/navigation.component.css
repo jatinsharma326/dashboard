@@ -1,0 +1,21 @@
+
+mat-sidenav-content{
+    height: -webkit-fill-available;
+}
+
+.mat-toolbar.mat-warn {
+    background: #3c8dbc;
+    color: #fff;
+}
+mat-expansion-panel{
+    /* background-color:#222D32 */
+    background: grey;
+
+}
+mat-nav-list{
+    /* background-color:#222D32 */
+
+}
+#op{
+    background: rgb(139, 133, 133);
+}

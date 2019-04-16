@@ -1,0 +1,9 @@
+.container{
+    margin-top:40px;
+    height:600px;
+    width: 100%;
+}
+
+input{
+    float: right;
+}

@@ -1,0 +1,62 @@
+<mat-toolbar color="warn">
+  <mat-toolbar-row>
+    <span>PrabhuBhakti</span>
+    <button style="margin-left:40px;" type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" color="primary">
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #drawer mode="side" opened role="navigation" id="op" >
+    <mat-nav-list>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <mat-icon>videocam</mat-icon>&nbsp;
+                <span [ngStyle] = "style()"[ngClass]="style">Video</span>
+              </mat-panel-title>
+              
+            </mat-expansion-panel-header>
+          
+            <button mat-button [ngStyle] = "style()" routerLink="add_video" >Add new Video</button><br/>
+            <button mat-button [ngStyle] = "style()" routerLink = "add_remove">Add/Remove Video</button><br/>
+            <button mat-button [ngStyle] = "style()">Set Priority</button><br/>
+          
+          </mat-expansion-panel>
+       
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <mat-icon>videocam</mat-icon>&nbsp;
+                <span [ngStyle] = "style()">Products</span>
+              </mat-panel-title>
+              
+            </mat-expansion-panel-header>
+          
+            <button mat-button routerLink = "second" [ngStyle] = "style()">Add new Product</button><br/>
+            <button mat-button routerLink = "add_product" [ngStyle] = "style()">Add/Remove Product</button><br/>
+            <button mat-button [ngStyle] = "style()">Set Priority</button><br/>
+          
+          </mat-expansion-panel>
+
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <mat-icon>videocam</mat-icon>&nbsp;
+                <span [ngStyle] = "style()">Social Sharing</span>
+              </mat-panel-title>
+              
+            </mat-expansion-panel-header>
+          
+            <button mat-button [ngStyle] = "style()">Add new Sharing</button><br/>
+            <button mat-button [ngStyle] = "style()">Set Priority</button><br/>
+          
+          </mat-expansion-panel>
+          
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <span style="margin: 40px 0px 20px 20px;font-size:1em;" [ngStyle] = "style()" >DashBoard</span>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
